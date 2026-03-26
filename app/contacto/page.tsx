@@ -1,20 +1,84 @@
-export default function ContactoPage() {
-  return (
-    <main className="max-w-5xl mx-auto px-6 py-10">
-      <h1 className="text-3xl font-bold mb-6">Contacto</h1>
-      <p className="mb-4">
-        Si necesitas apoyo en servicios TI, automatización o asesoría tecnológica,
-        contáctame.
-      </p>
+"use client";
 
-      <div className="space-y-3">
-        <p>
-          <strong>Email:</strong> tucorreo@ejemplo.com
-        </p>
-        <p>
-          <strong>WhatsApp:</strong> +56 9 XXXX XXXX
-        </p>
-      </div>
+import { useState } from "react";
+
+export default function ContactoPage() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      nombre: formData.get("nombre"),
+      email: formData.get("email"),
+      mensaje: formData.get("mensaje"),
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+
+    setLoading(false);
+
+    if (res.ok) {
+      setSuccess(true);
+      form.reset();
+    }
+  }
+
+  return (
+    <main className="max-w-5xl mx-auto px-6 py-16">
+      <h1 className="text-4xl font-bold mb-8 text-center">
+        Contacto Digitup
+      </h1>
+
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-xl mx-auto space-y-4"
+      >
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Nombre"
+          required
+          className="w-full border p-3 rounded-lg"
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          className="w-full border p-3 rounded-lg"
+        />
+
+        <textarea
+          name="mensaje"
+          placeholder="Cuéntanos qué necesitas"
+          required
+          className="w-full border p-3 rounded-lg h-32"
+        />
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-black text-white py-3 rounded-lg"
+        >
+          {loading ? "Enviando..." : "Enviar solicitud"}
+        </button>
+
+        {success && (
+          <p className="text-green-600 text-center">
+            Solicitud enviada correctamente 🚀
+          </p>
+        )}
+      </form>
     </main>
   );
 }

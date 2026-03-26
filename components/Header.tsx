@@ -1,8 +1,8 @@
 export default function Header() {
   return (
-    <header className="w-full bg-black text-white p-4">
+    <header className="sticky top-0 z-50 w-full bg-black text-white p-4">
       <nav className="max-w-5xl mx-auto flex justify-between items-center">
-        <h1 className="font-bold">Pedro Peña</h1>
+        <h1 className="font-bold">Digitup</h1>
         <ul className="flex gap-4">
           <li>
             <a href="/">Inicio</a>

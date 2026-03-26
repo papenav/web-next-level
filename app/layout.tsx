@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pedro Peña | Servicios TI",
+  title: "Digitup | Servicios TI",
   description:
     "Consultoría TI, DevOps, automatización, soporte y asesoría tecnológica para empresas.",
 };
