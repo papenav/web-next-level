@@ -8,8 +8,10 @@ import {
   Cloud,
   Wrench,
   BarChart3,
+  Sparkles,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle } from "lucide-react";
 
 const services = [
   {
@@ -97,6 +99,21 @@ const services = [
       "Diseño de soluciones digitales",
       "Modernización operativa",
       "Mayor eficiencia y visibilidad",
+    ],
+    icon: Sparkles,
+  },
+  {
+    id: "reportabilidad",
+    title: "Reportabilidad y Analítica",
+    short:
+      "Diseñamos dashboards e indicadores para mejorar visibilidad y toma de decisiones.",
+    description:
+      "Construimos soluciones de reportabilidad que permiten consolidar información, visualizar indicadores clave y apoyar la toma de decisiones con datos claros, oportunos y accionables.",
+    bullets: [
+      "Dashboards e indicadores clave",
+      "Consolidación de información",
+      "Reportes automáticos y en tiempo real",
+      "Visibilidad para la toma de decisiones",
     ],
     icon: BarChart3,
   },
@@ -197,11 +214,17 @@ export default function InteractiveServices() {
               {selectedService.bullets.map((item) => (
                 <div
                   key={item}
-                  className="p-5 sm:p-6 border rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="p-5 sm:p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center flex flex-col justify-between"
                 >
-                  <p className="font-medium text-sm sm:text-base text-gray-700">
+                  {/* TEXTO */}
+                  <p className="font-semibold text-sm sm:text-base text-gray-800 leading-snug mb-4">
                     {item}
                   </p>
+
+                  {/* ICONO ABAJO */}
+                  <div className="flex justify-center">
+                    <CheckCircle className="text-gray-800" size={20} />
+                  </div>
                 </div>
               ))}
             </div>

@@ -1,6 +1,7 @@
 import InteractiveServices from "@/components/InteractiveServices";
 import { Briefcase, Handshake, Target } from "lucide-react";
 import TechCarousel from "@/components/TechCarousel";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -144,6 +145,7 @@ export default function Home() {
           Contactar ahora
         </a>
       </section>
+      <Footer />
     </main>
   );
 }
