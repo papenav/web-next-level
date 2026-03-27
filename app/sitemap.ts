@@ -8,5 +8,9 @@ export default function sitemap() {
       url: "https://digitup.cl/contacto",
       lastModified: new Date(),
     },
+    {
+      url: "https://digitup.cl/antofagasta",
+      lastModified: new Date(),
+    },
   ];
 }

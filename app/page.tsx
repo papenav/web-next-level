@@ -17,13 +17,12 @@ export default function Home() {
         </h1>
 
         <p className="text-base sm:text-xl mb-3 max-w-2xl mx-auto text-gray-600 px-1">
-          Tecnología que impulsa tu negocio
+          Soluciones tecnológicas para ordenar, automatizar y hacer crecer tu operación
         </p>
 
         <p className="text-sm sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto text-gray-600 px-1 leading-7">
-          Ayudamos a empresas y emprendedores a optimizar, automatizar y
-          transformar digitalmente sus procesos con soluciones tecnológicas a
-          medida.
+          Ayudamos a empresas en Antofagasta y todo Chile a optimizar, automatizar y 
+          transformar digitalmente sus procesos con soluciones tecnológicas a medida.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto">
@@ -40,6 +39,10 @@ export default function Home() {
             Contacto
           </a>
         </div>
+
+        <p className="mt-5 text-xs sm:text-sm text-gray-500">
+          Atención remota en todo Chile · Atención presencial en Antofagasta
+        </p>
       </section>
 
       {/* SERVICIOS INTERACTIVOS */}

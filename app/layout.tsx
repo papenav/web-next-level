@@ -15,9 +15,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Digitup | Servicios TI",
+  title: "Digitup | Consultoría TI y Automatización de Procesos",
   description:
-    "Consultoría TI, DevOps, automatización, soporte y asesoría tecnológica para empresas.",
+    "Consultoría TI en Antofagasta y todo Chile. Automatización de procesos, soporte TI, reportabilidad, soluciones cloud y desarrollo a medida para empresas.",
+  keywords: [
+    "consultoría TI Antofagasta",
+    "soporte TI Antofagasta",
+    "automatización de procesos Antofagasta",
+    "consultoría TI Chile",
+    "soluciones cloud Chile",
+    "reportabilidad y analítica",
+    "transformación digital empresas",
+    "desarrollo de soluciones a medida",
+  ],
+  openGraph: {
+    title: "Digitup | Consultoría TI y Automatización de Procesos",
+    description:
+      "Consultoría TI en Antofagasta y todo Chile. Automatización de procesos, soporte TI, reportabilidad, soluciones cloud y desarrollo a medida para empresas.",
+    url: "https://digitup.cl",
+    siteName: "Digitup",
+    locale: "es_CL",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://digitup.cl",
+  },
 };
 
 export default function RootLayout({
