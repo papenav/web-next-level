@@ -56,7 +56,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {/* Google Analytics */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-3117EQBN7L`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
