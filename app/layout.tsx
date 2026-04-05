@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://digitup.cl"),
   title: "Digitup | Consultoría TI y Automatización de Procesos",
   description:
     "Consultoría TI en Antofagasta y todo Chile. Automatización de procesos, soporte TI, reportabilidad, soluciones cloud y desarrollo a medida para empresas.",
@@ -32,11 +33,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digitup | Consultoría TI y Automatización de Procesos",
     description:
-      "Consultoría TI en Antofagasta y todo Chile. Automatización de procesos, soporte TI, reportabilidad, soluciones cloud y desarrollo a medida para empresas.",
+      "Consultoría TI en Antofagasta y todo Chile. Automatización de procesos y soluciones tecnológicas para empresas.",
     url: "https://digitup.cl",
     siteName: "Digitup",
     locale: "es_CL",
     type: "website",
+    images: [
+      {
+        url: "/og-digitup.png",
+        width: 1200,
+        height: 630,
+        alt: "Digitup - Consultoría TI",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digitup | Consultoría TI",
+    description:
+      "Automatización, cloud y desarrollo a medida para empresas.",
+    images: ["/og-digitup.png"],
   },
   alternates: {
     canonical: "https://digitup.cl",
@@ -54,9 +70,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* Google Analytics */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-3117EQBN7L`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-3117EQBN7L"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
